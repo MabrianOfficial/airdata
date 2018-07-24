@@ -4,203 +4,565 @@ title: Field Reference
 nav: fields 
 ---
 
-<h3>Field reference for Sample API data</h3>
+<h3>Field reference for AirData API data</h3>
 
-<p>The fields below are returned in the Sample API.</p> 
-<p>Add additional information about fields.</p> 
+<h5>Capacity Fields</h5>
 
-
-<h5>Example API Fields</h5>
-
-<table id="city-pairs-fields" class="field-table">
-	<colgroup>
-		<col span="1" style="width: 36%;">
-		<col span="1" style="width: 36%;">
-		<col span="1" style="width: 18%;">
-		
-	</colgroup>
+<table id="capacity-fields" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
 <thead>
 <tr>
 <th>Field name</th>
 <th>Description</th>
 <th>Data type</th>
-
-</tr>
 </thead>
-<tbody>
+</tr>
+<tr>
+    <td>
+        <code>arrival_month</code>
+        </td>
+    <td>Arrival Month</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>pax</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, pax count entries</td>
+    <td>edge(country_code, pax_count)</td>
+</tr>
 
 <tr>
-	<td>
-		<code>ID</code>
-		</td>
-	<td>Unique identifier.</td>
-	<td>string</td>
-	</tr>
+    <td>
+        <code>flights</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, total flights entries</td>
+    <td>edge(country_code, total_flights)</td>
+</tr>
 
 <tr>
-	<td>
-		<code>ITEM_NUM</code>
-		</td>
-	<td>Item number.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>AWARD_YEAR</code>
-		</td>
-	<td>Award Year.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>ORIGIN_AIRPORT_ABBREV</code>
-		</td>
-	<td>Origin Airport Abbreviation.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>DESTINATION_AIRPORT_ABBREV</code>
-		</td>
-	<td>Destination Airport Abbreviation.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>ORIGIN_CITY_NAME</code>
-		</td>
-	<td>Origin City Name.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>ORIGIN_STATE</code>
-		</td>
-	<td>Origin State.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>ORIGIN_COUNTRY</code>
-		</td>
-	<td>Origin Country.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>DESTINATION_CITY_NAME</code>
-		</td>
-	<td>Destination City Name.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>DESTINATION_STATE</code>
-		</td>
-	<td>Destination State.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>DESTINATION_COUNTRY</code>
-		</td>
-	<td>Destination Country.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>AIRLINE_ABBREV</code>
-		</td>
-	<td>Airline Abbreviation.</td>
-	<td>string</td>
-	</tr>
-<tr>
-	<td>
-		<code>AWARDED_SERV</code>
-		</td>
-	<td>Awarded Serv.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>PAX_COUNT</code>
-		</td>
-	<td>PAX Count.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>YCA_FARE</code>
-		</td>
-	<td>YCA Fare.</td>
-	<td>string</td>
-	</tr>
-
-
-<tr>
-	<td>
-		<code>XCA_FARE</code>
-		</td>
-	<td>XCA Fare.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>BUSINESS_FARE</code>
-		</td>
-	<td>Business Fare.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>ORIGIN_AIRPORT_LOCATION</code>
-		</td>
-	<td>Origin Airport Location.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>DESTINATION_AIRPORT_LOCATION</code>
-		</td>
-	<td>Destination Airport Location.</td>
-	<td>string</td>
-	</tr>
-
-
-<tr>
-	<td>
-		<code>ORIGIN_CITY_STATE_AIRPORT</code>
-		</td>
-	<td>Origin City State Airport.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>DESTINATION_CITY_STATE_AIRPORT</code>
-		</td>
-	<td>Destination City State Airport.</td>
-	<td>string</td>
-	</tr>
-
-<tr>
-	<td>
-		<code>EXPIRATION_DATE</code>
-		</td>
-	<td>Expiration Date.</td>
-	<td>string</td>
-	</tr>
-
+    <td>
+        <code>routes</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, total unique routes entries</td>
+    <td>edge(country_code, unique_routes_count)</td>
+</tr>
 
 </tbody>
 </table>
+
+
+<h5>Capacity Parameters</h5>
+
+<table id="capacity-parameters" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+</thead>
+</tr>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Data type</th>
+
+</thead>
+<tr>
+    <td>
+        <code><b>iata</b></code>
+        </td>
+    <td>The iata's arrival airport. If its passed more than one time, it aggregates results for all queried iatas</td>
+    <td>string</td>
+</tr>
+<tr>
+    <td>
+        <code><b>arrival_date</b></code>
+        </td>
+    <td>Sets the date where capacity is returned</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>months_ago</code>
+        </td>
+    <td>How many months ago since the mandatory <b>arrival_date</b> parameter will be retorned</td>
+    <td>integer</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="response" style="overflow: hidden;">
+    <h4 class="curl">Curl</h4>
+    <div class="block curl">
+        <pre>curl -X GET --header 'Accept: application/json' 'https://api.mabrian.com/v1/airdata/capacity/?iata=SVQ&arrival_date=2018-02-01&months_ago=2&access_token=&lt;YOUR_TOKEN&gt;'</pre></div>
+          <h4 data-sw-translate="">Request URL</h4>
+          <div class="block request_url"><pre>https://api.mabrian.com/v1/airdata/capacity/?iata=SVQ&amp;arrival_date=2018-02-01&amp;months_ago=2&amp;access_token=&lt;YOUR_TOKEN&gt;</pre></div>
+          <h4 data-sw-translate="">Response Body</h4>
+          <div class="block response_body hljs json">
+            <pre class="json">
+[
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-01-01"</span>,
+    "<span class="hljs-attr">pax</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">flights</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">routes</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+],
+[
+
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-02-01"</span>,
+    "<span class="hljs-attr">pax</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">flights</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">routes</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+]
+            </pre>
+          </div>
+          <h4 data-sw-translate="">Response Code</h4>
+          <div class="block response_code"><pre>200</pre></div>
+          <h4 data-sw-translate="">Response Headers</h4>
+          <div class="block response_headers"><pre>{<br>  "content-type": "application/json; charset=utf-8"<br>}</pre></div>
+</div>
+
+<hr>
+
+<h5>Searches Fields</h5>
+
+<table id="searches-fields" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Description</th>
+<th>Data type</th>
+</thead>
+</tr>
+<tr>
+    <td>
+        <code>arrival_month</code>
+        </td>
+    <td>Arrival Month</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>advance_search</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, avg advance search days entries</td>
+    <td>edge(country_code, avg_adv_search_days)</td>
+</tr>
+
+<tr>
+    <td>
+        <code>stay_duration</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, avg stay duration days entries</td>
+    <td>edge(country_code, avg_stay_duration_days)</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h5>Searches Parameters</h5>
+
+<table id="searches-parameters" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Data type</th>
+</thead>
+</tr>
+<tr>
+    <td>
+        <code><b>iata</b></code>
+        </td>
+    <td>The iata's arrival airport. If its passed more than one time, it aggregates results for all queried iatas</td>
+    <td>string</td>
+</tr>
+<tr>
+    <td>
+        <code><b>arrival_date</b></code>
+        </td>
+    <td>Sets the date where capacity is returned</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>months_ago</code>
+        </td>
+    <td>How many months ago since the mandatory <b>arrival_date</b> parameter will be retorned</td>
+    <td>integer</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="response" style="overflow: hidden;">
+    <h4 class="curl">Curl</h4>
+    <div class="block curl">
+        <pre>curl -X GET --header 'Accept: application/json' 'https://api.mabrian.com/v1/airdata/searches/?iata=SVQ&arrival_date=2018-02-01&months_ago=2&access_token=&lt;YOUR_TOKEN&gt;'</pre></div>
+          <h4 data-sw-translate="">Request URL</h4>
+          <div class="block request_url"><pre>https://api.mabrian.com/v1/airdata/searches/?iata=SVQ&amp;arrival_date=2018-02-01&amp;months_ago=2&amp;access_token=&lt;YOUR_TOKEN&gt;</pre></div>
+          <h4 data-sw-translate="">Response Body</h4>
+          <div class="block response_body hljs json">
+            <pre class="json">
+[
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-01-01"</span>,
+    "<span class="hljs-attr">advance_search</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">stay_duration</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+],
+[
+
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-02-01"</span>,
+    "<span class="hljs-attr">advance_search</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">stay_duration</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+]
+            </pre>
+          </div>
+          <h4 data-sw-translate="">Response Code</h4>
+          <div class="block response_code"><pre>200</pre></div>
+          <h4 data-sw-translate="">Response Headers</h4>
+          <div class="block response_headers"><pre>{<br>  "content-type": "application/json; charset=utf-8"<br>}</pre></div>
+</div>
+
+<hr>
+
+<h5>Bookings Fields</h5>
+
+<table id="bookings-fields" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Description</th>
+<th>Data type</th>
+</thead>
+</tr>
+<tr>
+    <td>
+        <code>arrival_month</code>
+        </td>
+    <td>Arrival Month</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>advance_purchase</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, avg advance purchase days entries</td>
+    <td>edge(country_code, avg_adv_purchase_days)</td>
+</tr>
+
+<tr>
+    <td>
+        <code>stay_duration</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, avg stay duration days entries</td>
+    <td>edge(country_code, avg_stay_duration_days)</td>
+</tr>
+
+<tr>
+    <td>
+        <code>segments</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, avg segment count entries</td>
+    <td>edge(country_code, avg_segment_count)</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h5>Bookings Parameters</h5>
+
+<table id="bookings-parameters" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Data type</th>
+</thead>
+</tr>
+<tr>
+    <td>
+        <code><b>iata</b></code>
+        </td>
+    <td>The iata's arrival airport. If its passed more than one time, it aggregates results for all queried iatas</td>
+    <td>string</td>
+</tr>
+<tr>
+    <td>
+        <code><b>arrival_date</b></code>
+        </td>
+    <td>Sets the date where capacity is returned</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>months_ago</code>
+        </td>
+    <td>How many months ago since the mandatory <b>arrival_date</b> parameter will be retorned</td>
+    <td>integer</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="response" style="overflow: hidden;">
+    <h4 class="curl">Curl</h4>
+    <div class="block curl">
+        <pre>curl -X GET --header 'Accept: application/json' 'https://api.mabrian.com/v1/airdata/bookings/?iata=SVQ&arrival_date=2018-02-01&months_ago=2&access_token=&lt;YOUR_TOKEN&gt;'</pre></div>
+          <h4 data-sw-translate="">Request URL</h4>
+          <div class="block request_url"><pre>https://api.mabrian.com/v1/airdata/bookings/?iata=SVQ&amp;arrival_date=2018-02-01&amp;months_ago=2&amp;access_token=&lt;YOUR_TOKEN&gt;</pre></div>
+          <h4 data-sw-translate="">Response Body</h4>
+          <div class="block response_body hljs json">
+            <pre class="json">
+[
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-01-01"</span>,
+    "<span class="hljs-attr">advance_purchase</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">stay_duration</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">segments</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+],
+[
+
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-02-01"</span>,
+    "<span class="hljs-attr">advance_purchase</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">stay_duration</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    },
+    "<span class="hljs-attr">segments</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+]
+            </pre>
+          </div>
+          <h4 data-sw-translate="">Response Code</h4>
+          <div class="block response_code"><pre>200</pre></div>
+          <h4 data-sw-translate="">Response Headers</h4>
+          <div class="block response_headers"><pre>{<br>  "content-type": "application/json; charset=utf-8"<br>}</pre></div>
+</div>
+
+
+<hr>
+
+<h5>Flight Prices Fields</h5>
+
+<table id="flightprices-fields" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Description</th>
+<th>Data type</th>
+</thead>
+</tr>
+<tr>
+    <td>
+        <code>arrival_month</code>
+        </td>
+    <td>Arrival Month</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>avg_price</code>
+        </td>
+    <td>Sorted dictionary edge with country_code, avg price (€) entries</td>
+    <td>edge(country_code, avg_price)</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h5>Flight Prices Parameters</h5>
+
+<table id="flightprices-parameters" class="field-table">
+    <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 55%;">
+        <col span="1" style="width: 25%;">
+        
+    </colgroup>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Data type</th>
+</thead>
+</tr>
+<tr>
+    <td>
+        <code><b>iata</b></code>
+        </td>
+    <td>The iata's arrival airport. If its passed more than one time, it aggregates results for all queried iatas</td>
+    <td>string</td>
+</tr>
+<tr>
+    <td>
+        <code><b>arrival_date</b></code>
+        </td>
+    <td>Sets the date where capacity is returned</td>
+    <td>datetime</td>
+</tr>
+<tr>
+    <td>
+        <code>months_ago</code>
+        </td>
+    <td>How many months ago since the mandatory <b>arrival_date</b> parameter will be retorned</td>
+    <td>integer</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="response" style="overflow: hidden;">
+    <h4 class="curl">Curl</h4>
+    <div class="block curl">
+        <pre>curl -X GET --header 'Accept: application/json' 'https://api.mabrian.com/v1/airdata/flight_prices/?iata=SVQ&arrival_date=2018-02-01&months_ago=2&access_token=&lt;YOUR_TOKEN&gt;'</pre></div>
+          <h4 data-sw-translate="">Request URL</h4>
+          <div class="block request_url"><pre>https://api.mabrian.com/v1/airdata/flight_prices/?iata=SVQ&amp;arrival_date=2018-02-01&amp;months_ago=2&amp;access_token=&lt;YOUR_TOKEN&gt;</pre></div>
+          <h4 data-sw-translate="">Response Body</h4>
+          <div class="block response_body hljs json">
+            <pre class="json">
+[
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-01-01"</span>,
+    "<span class="hljs-attr">avg_price</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+],
+[
+
+    "<span class="hljs-attr">arrival_month</span>": <span class="hljs-string">"2018-02-01"</span>,
+    "<span class="hljs-attr">avg_price</span>": {
+        "<span class="hljs-attr">GB</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">ES</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">DE</span>": <span class="hljs-string">...</span>,
+        "<span class="hljs-attr">FR</span>": <span class="hljs-string">...</span>
+    }
+]
+            </pre>
+          </div>
+          <h4 data-sw-translate="">Response Code</h4>
+          <div class="block response_code"><pre>200</pre></div>
+          <h4 data-sw-translate="">Response Headers</h4>
+          <div class="block response_headers"><pre>{<br>  "content-type": "application/json; charset=utf-8"<br>}</pre></div>
+</div>
+
+
 
 <body id="fields">
 </body>
